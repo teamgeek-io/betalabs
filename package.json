@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter",
-  "description": "Gatsby starter",
+  "name": "Betalabs",
+  "description": "Betalabs",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
