@@ -26,7 +26,7 @@ const Hero = styled.div`
 
 const Description = styled.div`
   /* background: rgba(255,0,0,0.5); */
-  grid-column: 2 / -1;
+  grid-column: 3 / -1;
   grid-row: 1 / 2;
   font-family: 'paper_orangelight';
   font-size: 1.25rem;

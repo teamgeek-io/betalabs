@@ -19,10 +19,10 @@ const Title = styled.h1`
   font-family: 'chloeregular';
   font-weight: 200;
   color: rgba(255, 255, 255, 1);
-  font-size: 3rem;
   margin-bottom: 2rem;
+  font-size: 9.5vw;
   @media (min-width: 768px) {
-    font-size: 6.5rem;
+    font-size: 7.5vw;
   }
 `;
 
@@ -101,13 +101,17 @@ const SectionNumber = styled.div`
   h1 {
     font-family: 'chloeregular';
     font-size: 150px;
-    color: #f8f8f8;
-    transform: translate(-70px, 70px);
+    color: #0e0e0e;
+    height: 100px;
+    transform: translate(-35px,-10px);
   }
   @media (min-width: 768px) {
      grid-column: 1 / 2;
     h1 {
       font-size: 230px;
+      height: 150px;
+      transform: translate(-70px, -40px);
+
     }
   }
 `;

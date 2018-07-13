@@ -21,7 +21,10 @@ const GridLines = styled.div`
   left: 0;
   top: 0;
   display: grid;
-  grid-template: 100vh / 1fr 1fr 1fr 1fr;
+  grid-template: 100vh / repeat(2, 1fr);
+  @media (min-width: 768px) {
+    grid-template: 100vh / repeat(4, 1fr);
+  }
 `;
 
 const Line = styled.div`
