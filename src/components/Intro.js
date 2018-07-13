@@ -15,13 +15,19 @@ const Title = styled.h1`
   font-family: 'paper_orangelight';
   font-size: 2.5rem;
   font-weight: 200;
-  transform: translateX(-3px);
+  transform: translateX(-53px);
+  opacity: 0;
+  transition: all 500ms ease-out 250ms;
   strong {
     font-family: 'paper_orangeregular';
     font-weight: 400;
   }
   @media (min-width: 768px) {
     font-size: 4rem;
+  }
+  &.loaded {
+    transform: translateX(-3px);
+    opacity: 1;
   }
 `;
 
@@ -31,10 +37,17 @@ const Description = styled.p`
   font-weight: 200;
   text-align: right;
   line-height: 2.25rem;
+  opacity: 0;
+  padding-top: 2.5rem;
+  transform: translateX(-50px);
+  transition: all 500ms ease-out 500ms;
+  &.loaded {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @media (min-width: 768px) {
     font-size: 1.75rem;
     text-align: left;
-    transform: translateY(25%);
   }
 `;
 
@@ -45,7 +58,12 @@ const SectionNumber = styled.div`
     font-family: 'chloeregular';
     font-size: 150px;
     color: #f8f8f8;
-    transform: translateX(5px);
+    opacity: 0;
+    transition: all 500ms ease-out;
+    &.loaded {
+      opacity: 1;
+      transform: translateX(5px);
+    }
   }
   @media (min-width: 768px) {
     h1 {
@@ -56,19 +74,34 @@ const SectionNumber = styled.div`
 `;
 
 class Intro extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false
+    }
+  }
+
+  componentDidMount = () => {
+    let self = this;
+    setTimeout(function () {
+      self.setState({ loaded: true });
+    }, 500);
+  }
+
   render() {
+    let { loaded } = this.state;
     return (
       <IntroContainer>
 
         <SectionNumber>
-          <h1> 01 </h1>
+          <h1 className={loaded ? 'loaded' : ''}> 01 </h1>
         </SectionNumber>
 
-        <Title>
+        <Title className={loaded ? 'loaded' : ''}>
           <strong>beta</strong>labs
         </Title>
 
-        <Description>
+        <Description className={loaded ? 'loaded' : ''}>
           A Collective for designers, coders, story-tellers and
           problem-solvers; backing early-stage tech startups.
         </Description>

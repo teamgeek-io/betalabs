@@ -19,6 +19,7 @@ const Hero = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-position: ${p => `0 ${(p.scrollTop / 10)}px`};
   @media (min-width: 768px) {
     grid-column: 1 / 5;
   }
@@ -31,6 +32,9 @@ const Description = styled.div`
   font-family: 'paper_orangelight';
   font-size: 1.25rem;
   padding-top: 5rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 500ms ease-out 750ms;
   strong {
     font-family: 'chloeregular';
     position: relative;
@@ -45,6 +49,10 @@ const Description = styled.div`
       font-family: 'paper_orangelight';
       font-size: 1rem;
     }
+  }
+  &.loaded {
+    opacity: 1;
+    transform: translateX(0);
   }
   @media (min-width: 768px) {
     grid-column: 4 / 7;
@@ -73,14 +81,37 @@ const SectionNumber = styled.div`
 `;
 
 class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollTop: 0,
+      loaded: false
+    }
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+    let self = this;
+    setTimeout(function () {
+      self.setState({ loaded: true });
+    }, 500);
+  }
+
+  handleScroll(e) {
+    let scrollTop = e.target.scrollingElement.scrollTop;
+    this.setState({ scrollTop: scrollTop });
+  }
+
   render() {
+    let { scrollTop, loaded } = this.state;
     return (
       <GalleryContainer>
 
-        <Hero />
+        <Hero scrollTop={scrollTop}/>
 
         <Description
-          className="grid-line">
+          className={loaded ? 'loaded' : ''}>
             Located in the breathtaking <br />
             <strong
               data-text="Amarand Avenue">
