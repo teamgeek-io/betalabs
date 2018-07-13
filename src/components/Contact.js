@@ -125,15 +125,15 @@ class Contact extends Component {
           Be part of the future.
         </Title>
 
-        <MailLink href="mailto:info@betalabs.co.za" target="_top">
+        <MailLink href="mailto:info@betalabs.co.za?Subject=Hello" target="_top">
           Contact us
         </MailLink>
 
         <SocialLinks>
-          <SocialLink data-text="Like">
+          <SocialLink href="https://www.facebook.com/betalabscollective/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d={path_facebook} /></svg>
           </SocialLink>
-          <SocialLink data-text="Follow">
+          <SocialLink href="https://www.instagram.com/betalabscollective/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d={path_instagram} /></svg>
           </SocialLink>
         </SocialLinks>
