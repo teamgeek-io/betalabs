@@ -60,7 +60,7 @@ const SectionNumber = styled.div`
     font-size: 150px;
     color: #f8f8f8;
     opacity: 0;
-    transform: translateX(7px);
+    transform: translateX(10px);
     transition: all 500ms ease-out;
     &.loaded {
       opacity: 1;
