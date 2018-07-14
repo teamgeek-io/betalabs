@@ -36,7 +36,7 @@ const Description = styled.p`
   font-family: 'paper_orangelight';
   font-weight: 200;
   text-align: right;
-  line-height: 2.25rem;
+  line-height: 1.5rem;
   opacity: 0;
   padding-top: 2.5rem;
   transform: translateX(-50px);
@@ -48,6 +48,7 @@ const Description = styled.p`
   @media (min-width: 768px) {
     font-size: 1.75rem;
     text-align: left;
+    line-height: 2.25rem;
   }
 `;
 
@@ -59,10 +60,10 @@ const SectionNumber = styled.div`
     font-size: 150px;
     color: #f8f8f8;
     opacity: 0;
+    transform: translateX(7px);
     transition: all 500ms ease-out;
     &.loaded {
       opacity: 1;
-      transform: translateX(5px);
     }
   }
   @media (min-width: 768px) {

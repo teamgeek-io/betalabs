@@ -82,15 +82,6 @@ const SocialLink = styled.a`
   }
 `;
 
-/*
-const NewSectionNumber = styled(SectionNumber)`
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  transform: translateX(-7%);
-  color: #0e0e0e;
-`;
- */
-
 const SectionNumber = styled.div`
   grid-column: 1 / 4;
   grid-row: 3 / 4;

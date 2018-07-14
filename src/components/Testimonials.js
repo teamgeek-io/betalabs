@@ -19,6 +19,7 @@ const Quote = styled.p`
   font-family: 'paper_orangelight';
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+  line-height: 1.5rem;
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
