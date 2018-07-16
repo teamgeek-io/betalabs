@@ -103,7 +103,7 @@ class Intro extends Component {
         </Title>
 
         <Description className={loaded ? 'loaded' : ''}>
-          A Collective for designers, coders, story-tellers and
+          A collective for designers, coders, story-tellers and
           problem-solvers; backing early-stage tech startups.
         </Description>
 
