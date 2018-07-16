@@ -15,6 +15,7 @@ const Hero = styled.div`
   grid-row: 1 / 3;
   position: relative;
   img {
+    opacity: 0.75;
     width: 100%;
     height: 100%;
     object-fit: cover;

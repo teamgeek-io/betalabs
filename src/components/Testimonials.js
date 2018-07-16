@@ -43,7 +43,7 @@ const Testimonials = () => {
           to create the future they want to believe and live in.
         </Quote>
         <Author>
-          Ryan Brussow  &nbsp; - &nbsp; Founder
+          Ryan Brüssow  &nbsp; - &nbsp; Founder
         </Author>
       </Testimonial>
     </Container>

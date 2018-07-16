@@ -6,6 +6,6 @@ module.exports = {
   siteKeywords: `Betalabs Collective, Betalabs, Collective, Fintech, startup
     Menlyn Maine, cooworking, tech`,
   siteGATrackingID: "UA-122165719-1",
-  siteUrl: "http://betalabs.co.za",
+  siteUrl: "https://betalabs.co.za",
   copyright: "Copyright © 2018."
 };
